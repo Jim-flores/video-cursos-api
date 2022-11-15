@@ -9,6 +9,8 @@ const courseRoutes = require("./Routes/courses.routes");
 
 const videoRoutes = require("./Routes/videos.routes");
 
+const categoryRoutes = require("./Routes/categories.routes");
+
 require("dotenv").config();
 
 const app = express();
@@ -33,5 +35,6 @@ app.get("/", (req, res) => {
 app.use("/api/v1", userRoutes);
 app.use("/api/v1", courseRoutes);
 app.use("/api/v1", videoRoutes);
+app.use("/api/v1", categoryRoutes);
 
 app.listen(PORT, () => console.log(`Server started at port ${PORT}`));
